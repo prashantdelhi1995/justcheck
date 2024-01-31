@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expense tracker</title>
+  </head>
+
+  <body>
+    <form action="#" id="form">
+      <label for="amount" id="amount">amount:</label>
+      <input type="number" id="amountinput" name="amountinput" />
+
+      <label for="description" id="description">description:</label>
+      <input type="text" id="descriptioninput" name="descriptioninput" />
+      <select name="choose" id="selected">
+        <option value="#" selected>choose one of them</option>
+        <option value="fuel" id="fuel" name="fuel">fuel</option>
+        <option value="medical" id="medical" name="medical">medical</option>
+        <option value="travel" id="travel" name="travel">travel</option>
+        <option value="movie" id="movie" name="movies">Movies</option>
+      </select>
+      <input type="submit" value="add" id="submit" />
+    </form>
+
+    <div>
+      <ul id="ul"></ul>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
