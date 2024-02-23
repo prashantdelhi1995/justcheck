@@ -7,7 +7,7 @@ function handleFormSubmit(event) {
     };
     axios
       .post(
-        "https://crudcrud.com/api/d09c80f6a21a4c82b1b29cf54216c0e5/appointmentData",
+        "https://crudcrud.com/api/18989158019b425c97fcb71efe599531/appointmentData",
         userDetails
       )
       .then((response) => displayUserOnScreen(response.data))
@@ -20,7 +20,7 @@ function handleFormSubmit(event) {
   }
   axios
   .get(
-    "https://crudcrud.com/api/d09c80f6a21a4c82b1b29cf54216c0e5/appointmentData"
+    "https://crudcrud.com/api/18989158019b425c97fcb71efe599531/appointmentData"
   )
   .then((response) =>
   response.data.forEach(element => {
@@ -54,7 +54,7 @@ function handleFormSubmit(event) {
   
     deleteBtn.addEventListener("click",  function (event) {
       try {
-         axios.delete("https://crudcrud.com/api/d09c80f6a21a4c82b1b29cf54216c0e5/appointmentData/"+userDetails._id);
+         axios.delete("https://crudcrud.com/api/18989158019b425c97fcb71efe599531/appointmentData/"+userDetails._id)
          
         userList.removeChild(event.target.parentElement);
       } catch (error) {
@@ -68,15 +68,12 @@ function handleFormSubmit(event) {
       document.getElementById("username").value = userDetails.username;
   document.getElementById("email").value = userDetails.email;
   document.getElementById("phone").value = userDetails.phone;
+ 
       try {
-        axios.put("https://crudcrud.com/api/d09c80f6a21a4c82b1b29cf54216c0e5/appointmentData/"+userDetails._id,
-        userDetails
+        axios.delete("https://crudcrud.com/api/18989158019b425c97fcb71efe599531/appointmentData/"+userDetails._id).then(
+          res=>console.log(`deleted${res.data}`)
+        )
         
-        ).
-        then(response=>{
-          
-
-        })
         
        
      } catch (error) {
@@ -89,5 +86,5 @@ function handleFormSubmit(event) {
   }
   
   // Do not touch code below
-  module.exports = handleFormSubmit;
+  //module.exports = handleFormSubmit;
   

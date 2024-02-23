@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body><div id="noofpost"></div>
 <form id="formfillup" onsubmit="handleOnSubmit(event)">
     <label for="image">Image url</label>
     <input type="text" name="image_url" id="image"><br>
@@ -13,10 +13,10 @@
     <input type="text" name="title" id="title"><br>
     <label for="blog">blog</label>
     <input type="text" name="blog" id="blog"><br>
-    <button type="submit"> Post Blog</button>
+    <button type="submit" id="submitButton"> Post Blog</button>
 </form>
 <hr>
-<div id="noofpost"></div>
+
 <div id="blogs-container"></div>
 
 
